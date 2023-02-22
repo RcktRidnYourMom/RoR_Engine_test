@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @article %><br>
+
+
+<div>
+
+<h3>Comments</h3>
+<%= render @article.comments %>
+<%= render "blorgh/comments/form" %>
+ <button> <%= link_to "Edit this article", edit_article_path(@article) %> </button> <br>
+  <button><%= link_to "Back to articles", articles_path %></button>
+
+  <%= button_to "Destroy this article", @article, method: :delete %>
+</div>
